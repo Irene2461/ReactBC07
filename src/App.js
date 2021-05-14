@@ -10,7 +10,10 @@ import BTChonXe from './StateDemo/BTChonXe';
 import StyleDemo from './StyleDemo/StyleDemo';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
 import BaiTapThucHanhLayout from './BaiTapThucHanhLayout/BaiTapThucHanhLayout';
-
+import BTQuanLyPhim from './RenderWithMap/BTQuanLyPhim';
+import DemoProps from './PropsDemo/DemoProps';
+import BTDanhSachSanPham from './PropsDemo/BTDanhSachSanPham/BTDanhSachSanPham';
+import BTThuKinh from './BTThuKinh/BTThuKinh';
 function App() {
   return (
     <div className="App">
@@ -21,7 +24,11 @@ function App() {
       {/* <BTChonXe /> */}
       {/* <StyleDemo /> */}
       {/* <RenderWithMap /> */}
-    <BaiTapThucHanhLayout/>
+      {/* <BaiTapThucHanhLayout/> */}
+      {/* <BTQuanLyPhim/> */}
+      {/* <DemoProps/> */}
+      {/* <BTDanhSachSanPham/> */}
+      <BTThuKinh/>
     </div>
   );
 }

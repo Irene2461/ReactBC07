@@ -3,6 +3,7 @@ import BTHeader from './BTHeader'
 import BTCarousel from './BTCarousel'
 import BTProduct from './BTProduct'
 import BTFooter from './BTFooter'
+import BTProductList from './BTProductList'
 
 export default class BaiTapLayout extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class BaiTapLayout extends Component {
             <div className="bg-dark">
                 <BTHeader />
                 <BTCarousel />
-                <BTProduct />
+                <BTProductList />
                 <BTFooter />
             </div>
         )

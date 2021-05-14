@@ -9,21 +9,22 @@ export default class RenderWithMap extends Component {
 
   renderProduct = () => {
     const arrTagJSX = [];
-    for (let i = 0; i < arrTagJSX.length; i++) {
-      // Mỗi lần duyệt lấy ra 1 object trong arrProduct
-      let product = this.arrProduct[i];
-      // Từ dữ liệu product tạo ra tag jsx
-      let tagJSX = <div className="col-4">
-      <div className="card text-white bg-primary">
-          <img className="card-img-top" src="https://picsum.photos/200" alt="123" />
-          <div className="card-body">
-            <h4 className="card-title">{product.name}</h4>
-            <p className="card-text">{product.price}</p>
-          </div>
+    for (let i = 0; i < this.arrProduct.length; i++) {
+        //Mỗi lần duyệt lấy ra 1 object trong arrProduct
+        let product = this.arrProduct[i];
+        //Từ dữ liệu product tạo ra tag jsx
+        let tagJSX = <div className="col-4">
+        <div className="card text-white bg-primary">
+            <img className="card-img-top" src="https://picsum.photos" alt='123' />
+            <div className="card-body">
+                <h4 className="card-title">{product.name}</h4>
+                <p className="card-text">{product.price}</p>
+            </div>
         </div>
-    </div>;
-    //   Đưa tagjsx vào mảng 
-    arrTagJSX.push(tagJSX);
+        </div>
+        ;
+        //Đưa tagjsx vào mảng
+        arrTagJSX.push(tagJSX);
     }
     return arrTagJSX;
 
