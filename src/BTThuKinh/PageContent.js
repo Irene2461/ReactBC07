@@ -67,18 +67,30 @@ export default class PageContent extends Component {
     },
   ];
 
-  wearGlasses = (glasses) => {
-    return (
-      <img
-        src={glasses.url}
-        height="150px"
-        width="60%"
-        position="absolute"
-        style={{ position: `absolute`, top: `30%`, left: `20%` }}
-      />
-    );
+  state = {
+    glassesWear: {
+      id: 1,
+      price: 30,
+      name: "GUCCI G8850U",
+      url: "./glassesImage/v1.png",
+      desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
+    },
   };
-  
+
+  changeGlasses = (glasses) => {
+    this.setState({
+      glassesWear: glasses,
+    });
+  };
+
+  //   wearGlasses = (glasses) => {
+  //     return (
+  //     );
+  //   };
+  //   setStateGlasses = () =>{
+
+  //   }
+
   renderGlasses = () => {
     return this.dataGlasses.map((glasses, index) => {
       return (
@@ -86,8 +98,8 @@ export default class PageContent extends Component {
           className="col-2"
           key={index}
           onClick={() => {
-              console.log(glasses);
-              this.wearGlasses(glasses);
+            console.log(glasses);
+            this.changeGlasses(glasses);
           }}
         >
           <img src={glasses.url} alt={glasses.name} width="100%" />
@@ -117,8 +129,21 @@ export default class PageContent extends Component {
               backgroundImage: `url(./glassesImage/model.jpg)`,
               backgroundSize: `cover`,
             }}
-          ></div>
-          <div id="ThuKinh"></div>
+          >
+            <img
+              src={this.state.glassesWear.url}
+              height="150px"
+              width="55%"
+              position="absolute"
+              style={{ position: `absolute`, top: `30%`, left: `22.5%`, opacity: `0.8` }}
+            />
+            <div className="card text-white" style={{ position: `absolute`, top: `85%`, left: `0%`, opacity: `0.5`, backgroundColor: `orange` }}>
+                <div className="card-body text-left" >
+                    <h4 className="card-title" style={{color: `darkblue`}}>{this.state.glassesWear.name}</h4>
+                    <p className="card-text">{this.state.glassesWear.desc}</p>
+                </div>
+            </div>
+          </div>
           <div className="row">{this.renderGlasses()}</div>
         </div>
       </div>
