@@ -14,6 +14,12 @@ import BTQuanLyPhim from './RenderWithMap/BTQuanLyPhim';
 import DemoProps from './PropsDemo/DemoProps';
 import BTDanhSachSanPham from './PropsDemo/BTDanhSachSanPham/BTDanhSachSanPham';
 import BTThuKinh from './BTThuKinh/BTThuKinh';
+import DanhSachSanPhamRedux from './ReduxDemo/BTGioHangRedux/DanhSachSanPhamRedux';
+import BTGameXucXac from './ReduxDemo/BTGameXucXac/BTGameXucXac';
+import BTGameAvenger from './ReduxDemo/BTGameAvenger/BTGameAvenger';
+import FormQuanLySinhVien from './FormQuanLySinhVien/FormQuanLySinhVien';
+import LifeCycleReact from './LifeCycleReact/LifeCycleReact';
+
 function App() {
   return (
     <div className="App">
@@ -28,7 +34,12 @@ function App() {
       {/* <BTQuanLyPhim/> */}
       {/* <DemoProps/> */}
       {/* <BTDanhSachSanPham/> */}
-      <BTThuKinh/>
+      {/* <BTThuKinh/> */}
+      {/* <DanhSachSanPhamRedux/> */}
+      {/* <BTGameXucXac/> */}
+      <BTGameAvenger/>
+      {/* <FormQuanLySinhVien/> */}
+      {/* <LifeCycleReact/> */}
     </div>
   );
 }
